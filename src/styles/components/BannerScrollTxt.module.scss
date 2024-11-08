@@ -1,11 +1,12 @@
 @import "../helpers/helpers.scss";
 .BannerScrollTxt{
-  min-height: 100vh;
+  height: 100vh;
 	position: relative;
   overflow: hidden;
   background-color: blue;
   .aniTxt{
     position: absolute;
+    z-index: 1;
   }
   .bubbles{
     position: absolute;
@@ -15,6 +16,9 @@
     height: 100px;
     border-radius: 50%;
     filter: blur(16);
+    -webkit-animation: animateBubble 10s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -moz-animation: animateBubble 10s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    animation: animateBubble 10s linear infinite, sideWays 4s ease-in-out infinite alternate;
   }
   .bubbles1{
     position: absolute;
@@ -24,9 +28,50 @@
     height: 50px;
     border-radius: 50%;
     filter: blur(16);
+    -webkit-animation: animateBubble 10s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -moz-animation: animateBubble 10s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    animation: animateBubble 10s linear infinite, sideWays 4s ease-in-out infinite alternate;
   }
 }
 .BannerScrollTxtTwo{
   min-height: 100vh;
   background-color: black;
+}
+
+/* KEYFRAMES */
+
+@-webkit-keyframes animateBubble {
+  0% {
+      margin-top: 1000px;
+  }
+  100% {
+      margin-top: -100%;
+  }
+}
+
+@keyframes animateBubble {
+  0% {
+      margin-top: 1000px;
+  }
+  100% {
+      margin-top: -100%;
+  }
+}
+
+@-webkit-keyframes sideWays { 
+  0% { 
+      margin-left:0px;
+  }
+  100% { 
+      margin-left:50px;
+  }
+}
+
+@keyframes sideWays { 
+  0% { 
+      margin-left:0px;
+  }
+  100% { 
+      margin-left:50px;
+  }
 }

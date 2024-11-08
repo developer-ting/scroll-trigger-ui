@@ -30,8 +30,8 @@ export default function BannerScrollTxt({ gsap, ScrollTrigger }) {
 		function toastAnimationDesktop() {
 			toastAnimTimeline
 				.fromTo(".aniTxt", { y: "100vh", color:"black", opacity: 0 }, { y: "0vh", opacity: 1 }, 0)
-				.fromTo(".bubbles", { y: "100vh" }, { y: "0vh", opacity: 1 }, 0)
-				.fromTo(".bubbles1", { y: "100vh" }, { y: "0vh", opacity: 1 }, 0);
+				.fromTo(".bubbles", { y: "100vh" }, { y: "0vh"}, 0)
+				.fromTo(".bubbles1", { y: "100vh" }, { y: "0vh"}, 0);
 			ScrollTrigger.create({
 				trigger: `.${styles.BannerScrollTxt}`,
 				animation: toastAnimTimeline,
@@ -59,7 +59,7 @@ export default function BannerScrollTxt({ gsap, ScrollTrigger }) {
 			<section className={`${styles.BannerScrollTxt}`}>
 				<div className={`${styles.aniTxt} aniTxt`}>
 					<h2>
-						Demo Text
+						Animation Text
 					</h2>
 				</div>
 				<div className={`${styles.bubbles} bubbles`}></div>
