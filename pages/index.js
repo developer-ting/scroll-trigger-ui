@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import MetaTags from "@/components/MetaTags";
 import BannerScrollTxt from "../src/components/BannerScrollTxt";
+import BetterThanMeet from "../src/components/BetterThanMeet";
 
 // SECTIONS //
 
@@ -16,6 +17,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 // STYLES //
 import styles from "@/styles/pages/Home.module.scss";
+
 // IMAGES //
 
 // DATA //
@@ -33,7 +35,8 @@ export default function HomePage() {
 
 			{/* Page Content starts here */}
 			<main className={`${styles.HomePage}`}>
-				<BannerScrollTxt gsap={gsap} ScrollTrigger={ScrollTrigger} />
+				{/* <BannerScrollTxt gsap={gsap} ScrollTrigger={ScrollTrigger} /> */}
+				<BetterThanMeet gsap={gsap} ScrollTrigger={ScrollTrigger} />
 			</main>
 			{/* Page Content ends here */}
 
