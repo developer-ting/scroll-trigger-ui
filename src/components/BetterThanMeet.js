@@ -42,7 +42,7 @@ export default function BetterThanMeet({ gsap, ScrollTrigger }) {
 				end: "top top",
 				scrub: true,
 				// pin: true,
-				markers: true,
+				//markers: true,
 				// pinSpacing: true,
 			});
 
@@ -51,12 +51,12 @@ export default function BetterThanMeet({ gsap, ScrollTrigger }) {
 				.fromTo(
 					".circle_two",
 					{ rotate: "-180deg", opacity: 0 },
-					{ rotate: "0deg", opacity: 1 }
+					{ rotate: "0deg", opacity: 1 }, "first",
 				)
 				.fromTo(
 					".circle_one",
 					{ rotate: "0deg", opacity: 1 },
-					{ rotate: "180deg", opacity: 0 }
+					{ rotate: "180deg", opacity: 0 },"first",
 				);
 
 			ScrollTrigger.create({
